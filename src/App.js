@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import logo from "./assets/images/log.png";
-import bottle from "./assets/images/Bacardi-Breezer-bottle.webp";
-import portada from "./assets/images/portada.webp";
+import portada from "./assets/images/portada2.webp";
 import limonElectrico from './assets/images/limon-electrico.webp';
 import naranjaExplosiva from './assets/images/naranja-explosiva.webp';
 import piñaTropical from './assets/images/piña-tropical.webp';
+import chichaMorada from './assets/images/chicha-morada.webp';
+import maracuyaTropical from './assets/images/maracuya-breezer.webp';
+import mango from './assets/images/mango.webp';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +16,10 @@ export default function HomePage() {
     { name: "Limón Eléctrico", image: limonElectrico },
     { name: "Naranja Explosiva", image: naranjaExplosiva },
     { name: "Piña Tropical", image: piñaTropical },
+    { name: "Chicha Morada", image: chichaMorada},
+    { name: "Maracuya Tropical", image: maracuyaTropical},
+    { name: "Mango Twist", image: mango},
+
   ];
 
   const valuePropositions = [
@@ -104,7 +110,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <img
-                src={bottle}
+                src={chichaMorada}
                 alt="Bacardi Breezer Bottle"
                 className="w-full rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
               />
@@ -141,7 +147,7 @@ export default function HomePage() {
                   <img
                     src={flavor.image}
                     alt={`${flavor.name} Breezer`}
-                    className="w-full h-64 object-cover rounded-md mb-6 shadow-lg"
+                    className="w-full h-48 object-contain"
                   />
                   <h3 className="text-2xl font-semibold text-purple-700 mb-4">
                     {flavor.name}
